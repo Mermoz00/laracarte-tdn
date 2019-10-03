@@ -15,8 +15,8 @@
                 {{csrf_field()}}
 		        <div class="form-group {{$errors->has('name') ? 'has-error' : ''}}">
 		                <label class="control-label">Name</label>
-		                <input type="text" name="name" id="name" class="form-control" value="" required="required"> 
-                        {!! $errors->first('name','<span class="help-block">:message</span>') !!}
+		                <input type="text" name="name" id="name" class="form-control {{$errors->has('name') ? 'is-invalid' : ''}}" value="" required="required"> 
+                        {!! $errors->first('name','<span class="invalid-feedback">:message</span>') !!}
 		            </div>
 
 		            <div class="form-group {{$errors->has('email') ? 'has-error' : ''}}">
